@@ -1,0 +1,11 @@
+
+    <mat-form-field class="example-full-width">
+      <input matInput   [(ngModel)]="serverName">
+    </mat-form-field>
+    <div class="example-button-row">
+      <button id="id1" mat-raised-button color="accent" (click)="onAdd()">Add To List</button>
+    </div>
+  <h3>To Do List:</h3>
+ <div class="example-button-row">
+  <ul><p *ngFor="let server of servers  let i=index"><li>{{server}}&nbsp;<button  mat-raised-button color="accent" (click)="servers.splice(i,1)">Remove From List</button></li></ul>
+ </div>  
